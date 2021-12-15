@@ -42,7 +42,6 @@ contract TokenFarm {
     function issueTokens() public {
         //Only owner can call this function
         require(msg.sender == owner, "Caller must be the owner");
-
         //Issue tokens to all stakers
         for (uint256 i = 0; i < stakers.length; i++) {
             address recipient = stakers[i];
