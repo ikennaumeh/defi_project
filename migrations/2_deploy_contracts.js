@@ -19,5 +19,6 @@ module.exports = async function(deployer, network, accounts) {
   await dappToken.transfer(tokenFarm.address, '10000000000000000000000')
 
   //Tranfer 100 Mock DAI token
-  await daiToken.transfer(accounts[1], '100000000000000000000')
+  //changed account from "accounts[1] to "0x5F84BA90F2205E1Ff76D3661d667Bd3bb85cEfe2""
+  await daiToken.transfer(accounts[0], '100000000000000000000')
 }
